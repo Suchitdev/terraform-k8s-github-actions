@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: terraform-k8s-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: terraform-k8s-app
+
+  template:
+    metadata:
+      labels:
+        app: terraform-k8s-app
+
+    spec:
+      containers:
+      - name: terraform-k8s-app
+        image: suchit10/terraform-k8s-app:v1
+        ports:
+        - containerPort: 5000
