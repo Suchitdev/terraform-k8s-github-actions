@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps Control Center</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div>
+
+<h1>🚀 DevOps Control Center</h1>
+
+<p>Terraform • Kubernetes • Docker • GitHub Actions</p>
+
+</div>
+
+<div class="status">
+
+🟢 {{ app_status }}
+
+</div>
+
+</header>
+
+
+<section class="cards">
+
+<div class="card">
+
+<h3>📦 Deployment</h3>
+
+<h2>{{ deployment }}</h2>
+
+<p>Terraform Apply Completed</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌍 Environment</h3>
+
+<h2>{{ environment }}</h2>
+
+<p>Current Workspace</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🖥 Host</h3>
+
+<h2>{{ hostname }}</h2>
+
+<p>Current Machine</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐍 Python</h3>
+
+<h2>{{ python_version }}</h2>
+
+<p>Runtime Version</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💻 Operating System</h3>
+
+<h2>{{ os_name }}</h2>
+
+<p>{{ os_version }}</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🕒 IST Time</h3>
+
+<h2>{{ current_time }}</h2>
+
+<p>Asia/Kolkata</p>
+
+</div>
+
+</section>
+
+
+<section class="timeline">
+
+<h2>Deployment Pipeline</h2>
+
+<div class="step">
+
+<span>✔</span>
+
+GitHub Push
+
+</div>
+
+<div class="step">
+
+<span>✔</span>
+
+GitHub Actions Workflow
+
+</div>
+
+<div class="step">
+
+<span>✔</span>
+
+Terraform Apply
+
+</div>
+
+<div class="step">
+
+<span>✔</span>
+
+Docker Image
+
+</div>
+
+<div class="step">
+
+<span>✔</span>
+
+Kubernetes Deployment
+
+</div>
+
+<div class="step">
+
+<span>✔</span>
+
+Application Running
+
+</div>
+
+</section>
+
+
+<section class="tech">
+
+<h2>Technology Stack</h2>
+
+<div class="chips">
+
+<span>Terraform</span>
+
+<span>Kubernetes</span>
+
+<span>Docker</span>
+
+<span>GitHub Actions</span>
+
+<span>Flask</span>
+
+<span>Python</span>
+
+<span>Linux</span>
+
+</div>
+
+</section>
+
+
+<footer>
+
+Version {{ version }}
+
+<br>
+
+© {{ year }} DevOps Control Center
+
+</footer>
+
+
+</div>
+
+</body>
+</html>
