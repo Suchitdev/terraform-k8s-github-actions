@@ -24,3 +24,14 @@ venv/
 
 # Tests
 tests/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
