@@ -30,6 +30,17 @@ jobs:
         run: |
           docker build -t suchit10/terraform-k8s-app:${{ github.sha }} .
 
+     
+      - name: Install Trivy
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: "image"
+          image-ref: "suchit10/terraform-k8s-app:${{ github.sha }}"
+          format: "table"
+          exit-code: "1"
+          ignore-unfixed: true
+          severity: "HIGH,CRITICAL"
+
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
